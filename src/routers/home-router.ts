@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { authenticateToken, validateBody } from '@/middlewares';
-import { getRecords } from "@/controllers/records-controller";
+import { getRecords } from "@/controllers";
 
 
 const homeRouter = Router();

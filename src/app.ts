@@ -7,7 +7,8 @@ import { handleApplicationErrors } from './middlewares';
 import { 
   authenticationRouter, 
   homeRouter, 
-  signUpRouter 
+  signUpRouter,
+  credentialRouter 
 } from './routers';
 
 
@@ -19,6 +20,7 @@ app
   .use('/auth', authenticationRouter)
   .use('/sign-up', signUpRouter)
   .use('/home', homeRouter)
+  .use('/credential', credentialRouter)
   .use(handleApplicationErrors);
 
 

@@ -1,4 +1,3 @@
-import { notFoundError } from "@/errors";
 import recordsRepository from "@/repositories/records-repository";
 import { Response } from "express";
 import httpStatus from "http-status";
