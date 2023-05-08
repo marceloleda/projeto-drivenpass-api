@@ -1,19 +1,26 @@
-import { Prisma } from "@prisma/client";
 import { prisma } from '@/config';
+import {  user } from '@/protocols';
+import { Prisma, User } from '@prisma/client';
 
-  
-
-async function create(email: string, hash: string) {
+async function create(data: user) {
     return prisma.user.create({
-      data:{
-        email: email,
-        password: hash
-      }
+      data,
     });
 }
+
+async function findByEmail(email: string): Promise<User | null>{
+  const validEmail = await prisma.user.findFirst({
+    where: { email: email }
+  });
+
+  return validEmail;
+}
+
+
   
 const signUpRepository = {
     create,
+    findByEmail
 };
   
   

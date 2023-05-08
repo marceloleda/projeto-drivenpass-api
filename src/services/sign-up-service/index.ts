@@ -1,37 +1,41 @@
 import { SignInParams, invalidCredentialsError } from "../authentication-service";
 import userRepository from "@/repositories/user-repository.ts";
 import bcrypt from 'bcrypt';
-import { GetUserOrFailResult } from "@/protocols";
-import { conflictError } from "@/errors";
+import { conflictError, notFoundError } from "@/errors";
 import signUpRepository from "@/repositories/sign-up-repository";
+import { Prisma } from "@prisma/client";
+import { Response } from "express";
+import httpStatus from "http-status";
 
 
 
-async function signUp(params: SignInParams): Promise<any> {
+async function signUp(res: Response,params: SignInParams) {
     const { email, password } = params;
   
-    const userEmail: string = await userExist(email);
+    await checkIfEmailExists(res,email);
+
+    const hash = await hashPassword(password);
+    const data = {email, password: hash}
+    const createdUser = await signUpRepository.create(data);
   
-    const hash = await validatePasswordOrFail(password);
-    const createUser = await signUpRepository.create(userEmail, hash)
-  
-    return createUser
+    return createdUser;
 }
 
-async function userExist(email: string): Promise<any> {
-  const user = await userRepository.findByEmail(email, { id: true, email: true, password: true });
-  if (!user) throw  conflictError("Email aready exist!");
-
-  return user;
+async function checkIfEmailExists(res: Response, email: string) {
+  const existingUser = await signUpRepository.findByEmail(email);
+  if(existingUser){
+    return res.sendStatus(httpStatus.CONFLICT)
+  }
 }
 
+async function hashPassword(password?: string): Promise<string> {
+  if (!password) {
+    throw notFoundError();
+  }
 
-async function validatePasswordOrFail(password: string) {
   const hashedPassword = await bcrypt.hash(password, 10);
-
   return hashedPassword;
 }
-
 
 
 const signUpService = {

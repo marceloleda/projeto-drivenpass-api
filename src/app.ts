@@ -3,6 +3,7 @@ import 'express-async-errors';
 import express, { Express } from 'express';
 import cors from 'cors';
 import { connectDb, disconnectDB } from './config/database';
+import { handleApplicationErrors } from './middlewares';
 import { 
   authenticationRouter, 
   signUpRouter 
@@ -16,6 +17,8 @@ app
   .use(express.json())
   .use('/auth', authenticationRouter)
   .use('/sign-up', signUpRouter)
+  .use(handleApplicationErrors);
+
 
 export function init(): Promise<Express> {
   connectDb();

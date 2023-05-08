@@ -6,11 +6,11 @@ import httpStatus from "http-status";
 export async function postSignUp(req: Request, res: Response){
     const { email, password } = req.body as SignInParams;
     try{
-        const result = await signUpService.signUp({ email, password });
-        return res.status(httpStatus.CREATED).send(result);
+        await signUpService.signUp(res,{email, password });
+        return res.sendStatus(httpStatus.CREATED);
 
     }catch(error){
-        return res.status(httpStatus.UNAUTHORIZED).send({});
+        return res.status(httpStatus.INTERNAL_SERVER_ERROR);
     }
 }
 

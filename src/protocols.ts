@@ -6,3 +6,5 @@ export type ApplicationError = {
 };
 
 export type GetUserOrFailResult = Pick<User, 'id' | 'email' | 'password'>;
+
+export type user = Pick<User,  'email' | 'password'>;
