@@ -4,6 +4,7 @@ import jwt from 'jsonwebtoken';
 import { exclude } from '@/utils/prisma-utils';
 import { invalidCredentialsError } from '@/services/authentication-service/errors';
 import userRepository from '@/repositories/user-repository.ts';
+import { GetUserOrFailResult } from '@/protocols';
 
 async function signIn(params: SignInParams): Promise<SignInResult> {
   const { email, password } = params;
@@ -45,7 +46,6 @@ type SignInResult = {
   token: string;
 };
 
-type GetUserOrFailResult = Pick<User, 'id' | 'email' | 'password'>;
 
 const authenticationService = {
   signIn,

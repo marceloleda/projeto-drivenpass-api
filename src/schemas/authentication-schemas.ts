@@ -3,5 +3,5 @@ import { SignInParams } from '@/services';
 
 export const signInSchema = Joi.object<SignInParams>({
   email: Joi.string().email().required(),
-  password: Joi.string().required(),
+  password: Joi.string().min(10).required(),
 });
