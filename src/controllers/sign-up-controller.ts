@@ -1,4 +1,5 @@
 import { SignInParams } from "@/services";
+import signUpService from "@/services/sign-up-service";
 import { Request, Response } from "express";
 import httpStatus from "http-status";
 
