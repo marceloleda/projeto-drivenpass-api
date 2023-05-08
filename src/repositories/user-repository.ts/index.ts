@@ -26,4 +26,5 @@ const userRepository = {
   create,
 };
 
+
 export default userRepository;
