@@ -6,6 +6,7 @@ import { connectDb, disconnectDB } from './config/database';
 import { handleApplicationErrors } from './middlewares';
 import { 
   authenticationRouter, 
+  homeRouter, 
   signUpRouter 
 } from './routers';
 
@@ -17,6 +18,7 @@ app
   .use(express.json())
   .use('/auth', authenticationRouter)
   .use('/sign-up', signUpRouter)
+  .use('/home', homeRouter)
   .use(handleApplicationErrors);
 
 
