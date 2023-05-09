@@ -1,22 +1,27 @@
 import { prisma } from '@/config';
-import { credent } from '@/protocols';
+import { create, credent } from '@/protocols';
 
-async function createCredential(data: credent) {
+async function createCredential(data: create, encryptedPassword: string) {
   return prisma.credential.create({
-    data,
+    data: {
+      ...data,
+      password: encryptedPassword
+    },
   });
 }
 
-async function findManyCredencials(url: string) {
+async function findManyCredencials(url: string, userId: number) {
     return prisma.credential.findMany({
       where:{
+        userId,
         url
       },
     });
 }
-async function findManyCredencialsTitle(title: string) {
+async function findManyCredencialsTitle(title: string, userId: number) {
     return prisma.credential.findMany({
       where:{
+        userId,
         title
       },
     });
