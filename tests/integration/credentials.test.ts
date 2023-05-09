@@ -7,6 +7,7 @@ import { cleanDb, generateValidToken } from '../helpers';
 import { prisma } from '@/config';
 import app, { init } from '@/app';
 import { createUser } from '../factories';
+import credentialsService from '@/services/credential-service';
 
 beforeAll(async () => {
   await init();
@@ -17,10 +18,12 @@ beforeEach(async () => {
 });
 
 const server = supertest(app);
+const request = supertest;
+const baseURL = '/credential';
 
-describe('GET /home', () => {
+describe('/postCreateCredencial', () => {
   it('should respond with status 401 if no token is given', async () => {
-    const response = await server.get('/payments');
+    const response = await server.get(baseURL);
 
     expect(response.status).toBe(httpStatus.UNAUTHORIZED);
   });
@@ -28,7 +31,7 @@ describe('GET /home', () => {
   it('should respond with status 401 if given token is not valid', async () => {
     const token = faker.lorem.word();
 
-    const response = await server.get('/payments').set('Authorization', `Bearer ${token}`);
+    const response = await server.get(baseURL).set('Authorization', `Bearer ${token}`);
 
     expect(response.status).toBe(httpStatus.UNAUTHORIZED);
   });
@@ -37,58 +40,99 @@ describe('GET /home', () => {
     const userWithoutSession = await createUser();
     const token = jwt.sign({ userId: userWithoutSession.id }, process.env.JWT_SECRET);
 
-    const response = await server.get('/payments').set('Authorization', `Bearer ${token}`);
+    const response = await server.get(baseURL).set('Authorization', `Bearer ${token}`);
 
     expect(response.status).toBe(httpStatus.UNAUTHORIZED);
   });
 
   describe('when token is valid', () => {
-    it('should respond with status 404 when doesnt exist credentials', async () => {
-      const user = await createUser();
-      const token = await generateValidToken(user);
-      await createEnrollmentWithAddress(user);
+    it('should respond with status 204 when there is no enrollment for given user', async () => {
+      const token = await generateValidToken();
 
-      const response = await server.get('/payments?ticketId=1').set('Authorization', `Bearer ${token}`);
+      const response = await server.get(baseURL).set('Authorization', `Bearer ${token}`);
 
-      expect(response.status).toEqual(httpStatus.NOT_FOUND);
+      expect(response.status).toBe(httpStatus.NO_CONTENT);
     });
 
-    it('should respond with status 401 when user doesnt own given ticket', async () => {
-      const user = await createUser();
-      const token = await generateValidToken(user);
-      await createEnrollmentWithAddress(user);
-      const ticketType = await createTicketType();
 
-      const otherUser = await createUser();
-      const otherUserEnrollment = await createEnrollmentWithAddress(otherUser);
-      const ticket = await createTicket(otherUserEnrollment.id, ticketType.id, TicketStatus.RESERVED);
+  it('should return CREATED status and the created credential when the request is valid', async () => {
+    // Arrange
+    const user = await createUser();
+    const token = generateValidToken(user);
+    const credential = {
+      title: faker.lorem.words(),
+      url: faker.internet.url(),
+      username: faker.internet.userName(),
+      password: faker.internet.password(),
+    };
+    const data = { ...credential, userId: user.id };
 
-      const response = await server.get(`/payments?ticketId=${ticket.id}`).set('Authorization', `Bearer ${token}`);
+    // Act
+    const response = await request(server)
+      .post(baseURL)
+      .set('Authorization', `Bearer ${token}`)
+      .send(data);
 
-      expect(response.status).toEqual(httpStatus.UNAUTHORIZED);
-    });
+    // Assert
+    expect(response.status).toEqual(httpStatus.CREATED);
+    expect(response.body.title).toEqual(credential.title);
+    expect(response.body.url).toEqual(credential.url);
+    expect(response.body.username).toEqual(credential.username);
+  });
 
-    it('should respond with status 200 and with payment data', async () => {
-      const user = await createUser();
-      const token = await generateValidToken(user);
-      const enrollment = await createEnrollmentWithAddress(user);
-      const ticketType = await createTicketType();
-      const ticket = await createTicket(enrollment.id, ticketType.id, TicketStatus.RESERVED);
+  it('should return UNPROCESSABLE_ENTITY status when the maximum limit of credentials per site is reached', async () => {
+    // Arrange
+    const user = await createUser();
+    const token = generateValidToken(user);
+    const url = faker.internet.url();
+    const title = faker.lorem.words();
+    const data = {
+      title,
+      url,
+      username: faker.internet.userName(),
+      password: faker.internet.password(),
+      userId: user.id,
+    };
 
-      const payment = await createPayment(ticket.id, ticketType.price);
+    await credentialsService.credentialCreate({} as any, {} as any, { ...data, userId: user.id });
+    await credentialsService.credentialCreate({} as any, {} as any, { ...data, userId: user.id });
 
-      const response = await server.get(`/payments?ticketId=${ticket.id}`).set('Authorization', `Bearer ${token}`);
+    // Act
+    const response = await request(server)
+      .post(baseURL)
+      .set('Authorization', `Bearer ${token}`)
+      .send(data);
 
-      expect(response.status).toEqual(httpStatus.OK);
-      expect(response.body).toEqual({
-        id: expect.any(Number),
-        ticketId: ticket.id,
-        value: ticketType.price,
-        cardIssuer: payment.cardIssuer,
-        cardLastDigits: payment.cardLastDigits,
-        createdAt: expect.any(String),
-        updatedAt: expect.any(String),
-      });
-    });
+    // Assert
+    expect(response.status).toEqual(httpStatus.UNPROCESSABLE_ENTITY);
+    expect(response.body.message).toEqual('maximum limit of credentials reached per site');
+  });
+
+  it('should return CONFLICT status when the title is not unique', async () => {
+    // Arrange
+    const user = await createUser();
+    const token = generateValidToken(user);
+    const title = faker.lorem.words();
+    const url = faker.internet.url();
+    const data = {
+      title,
+      url,
+      username: faker.internet.userName(),
+      password: faker.internet.password(),
+      userId: user.id,
+    };
+
+    await credentialsService.credentialCreate({} as any, {} as any, { ...data, userId: user.id });
+
+    // Act
+    const response = await request(server)
+      .post(baseURL)
+      .set('Authorization', `Bearer ${token}`)
+      .send(data);
+
+    // Assert
+    expect(response.status).toEqual(httpStatus.CONFLICT);
+    expect(response.body.message).toEqual('title must be unique');
   });
 });
+

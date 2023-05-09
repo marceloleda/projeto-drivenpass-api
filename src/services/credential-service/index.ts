@@ -4,12 +4,12 @@ import { Request, Response } from "express";
 import httpStatus from "http-status";
 import Cryptr = require("cryptr");
 import recordsRepository from "@/repositories/records-repository";
+import { Credential } from "@prisma/client";
 const cryptr = new Cryptr(process.env.CRYPTR, { pbkdf2Iterations: 10000, saltLength: 10 });
 
 
 
-async function credentialCreate(res: Response, req: Request, data: create) {
-    const {password} = req.body
+async function credentialCreate(res: Response, data:create) {
     const quantityCredencial = await credentialRepository.findManyCredencials(data.url, data.userId)
     const titleCredencial = await credentialRepository.findManyCredencialsTitle(data.title, data.userId)
     console.log(quantityCredencial.length)
@@ -23,7 +23,7 @@ async function credentialCreate(res: Response, req: Request, data: create) {
             message: "title must be unique"
         })
     }
-    const encryptedPassword: string = cryptr.encrypt(password);
+    const encryptedPassword: string = cryptr.encrypt(data.password);
 
     const credential = await credentialRepository.createCredential(data, encryptedPassword)
     return credential 

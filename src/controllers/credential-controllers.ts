@@ -1,15 +1,16 @@
 import { AuthenticatedRequest } from "@/middlewares";
 import { create } from "@/protocols";
 import credentialsService from "@/services/credential-service";
+import { Credential } from "@prisma/client";
 import {  Response } from "express";
 import httpStatus from "http-status";
 
 export async function postCreateCredencial(req: AuthenticatedRequest, res: Response){
-    const {title, url, username} = req.body as create
+    const {title, url, username, password} = req.body as create
     const {userId} = req
-    const data = {title, url, username, userId}
+    const data = {title, url, username, password,userId}
     try{
-        const credential = await credentialsService.credentialCreate(res, req, data);
+        const credential = await credentialsService.credentialCreate(res, data);
         return res.sendStatus(httpStatus.CREATED).send(credential);
 
     }catch(error){

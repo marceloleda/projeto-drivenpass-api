@@ -11,7 +11,7 @@ export type user = Pick<User,  'email' | 'password'>;
 
 export type credent = Omit<Credential,  'id' >;
 
-export type create = Omit<Credential,  'id' | 'password' >;
+export type create = Omit<Credential,  'id'  >;
 
 export type networkCreat = Omit<Network,  'id' >;
 
