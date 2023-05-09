@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "moduleResolution": "Node",
     "target": "es2020",
     "module": "commonjs",
     "outDir": "dist",
@@ -19,8 +18,5 @@
       }
     ]
   },
-  "include": ["src", "tests"],
-  "ts-node": {
-    "esm": true
-  }
+  "include": ["src", "tests"]
 }

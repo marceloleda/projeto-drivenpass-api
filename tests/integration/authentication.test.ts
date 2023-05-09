@@ -2,7 +2,7 @@ import { faker } from '@faker-js/faker';
 import httpStatus from 'http-status';
 import supertest from 'supertest';
 import { createUser } from '../factories';
-import { cleanDb } from '../helpers';
+import { cleanDb, generateValidToken } from '../helpers';
 import app, { init } from '@/app';
 
 beforeAll(async () => {
@@ -62,7 +62,6 @@ describe('POST /auth/sign-in', () => {
   
           expect(response.status).toBe(httpStatus.OK);
         });
-  
       });
     });
   });
