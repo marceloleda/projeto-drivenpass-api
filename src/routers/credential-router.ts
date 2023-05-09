@@ -1,11 +1,14 @@
 import { Router } from "express";
 import { authenticateToken, validateBody } from '@/middlewares';
-import { postCreateCredencial } from "@/controllers";
+import { deleteCredential, postCreateCredencial } from "@/controllers";
 
 
 const credentialRouter = Router();
 
-credentialRouter.post('/', authenticateToken, postCreateCredencial)
+credentialRouter.all('/*', authenticateToken)
+.post('/', postCreateCredencial)
+.delete('/:id', deleteCredential)
+
 
 export { credentialRouter}
 

@@ -3,6 +3,7 @@ import credentialRepository from "@/repositories/credential-repository";
 import { Request, Response } from "express";
 import httpStatus from "http-status";
 import Cryptr = require("cryptr");
+import recordsRepository from "@/repositories/records-repository";
 const cryptr = new Cryptr(process.env.CRYPTR, { pbkdf2Iterations: 10000, saltLength: 10 });
 
 
@@ -25,12 +26,28 @@ async function credentialCreate(res: Response, req: Request, data: create) {
     const encryptedPassword: string = cryptr.encrypt(password);
 
     const credential = await credentialRepository.createCredential(data, encryptedPassword)
-    return credential
-        
+    return credential 
+}
+
+async function deleteCredentialById(res: Response, userId: number, id:string) {
+    const credentialId = parseInt(id, 10);
+    if(!userId){
+        return res.sendStatus(httpStatus.UNAUTHORIZED)
+    }
+    const findId = await recordsRepository.getRecordById(userId, credentialId);
+    
+    if(!findId || findId === null){
+        return res.sendStatus(httpStatus.NOT_FOUND)
+    }    
+    const deleteCredential = await credentialRepository.deleteById(userId, credentialId);
+
+
+    return deleteCredential
 }
 
 
 const credentialsService = {
     credentialCreate,
+    deleteCredentialById,
 };
 export default credentialsService;

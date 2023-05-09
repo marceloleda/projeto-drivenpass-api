@@ -8,7 +8,8 @@ import {
   authenticationRouter, 
   homeRouter, 
   signUpRouter,
-  credentialRouter 
+  credentialRouter, 
+  networkRouter
 } from './routers';
 
 
@@ -21,6 +22,7 @@ app
   .use('/sign-up', signUpRouter)
   .use('/home', homeRouter)
   .use('/credential', credentialRouter)
+  .use('/network', networkRouter)
   .use(handleApplicationErrors);
 
 
