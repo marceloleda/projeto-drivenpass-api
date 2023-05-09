@@ -22,13 +22,18 @@ async function listNetworks(res: Response, userId: number) {
     }
     const networks: Network[] = await networkRepository.findNetworks(userId)
     if(!networks || networks.length === 0){
-        return res.sendStatus(httpStatus.NOT_FOUND)
+        return res.status(httpStatus.NOT_FOUND).send({message: "there is no wifi registered"})
     }
+    networks.map((net)=>{
+        if(net.userId !== userId) return res.status(httpStatus.UNAUTHORIZED).send({message: "access denied"})
+    })
+    
     const decryptnetworks = networks.map((network)=>{
         const decryptedPassword = cryptr.decrypt(network.password)
         return {...network, password: decryptedPassword}
     })
     return decryptnetworks
+   
 }
 async function listNetworkById(res: Response, userId: number, id:string) {
     const credentialId = parseInt(id, 10);

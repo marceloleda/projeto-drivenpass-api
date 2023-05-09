@@ -13,7 +13,7 @@ async function listRecords(res: Response, userId: number) {
 
     const records: Credential[] = await recordsRepository.getRecords(userId)
     if(!records || records.length === 0){
-        return res.sendStatus(httpStatus.NOT_FOUND)
+        return res.status(httpStatus.NOT_FOUND).send({message: "there is no credentials registered"})
     }
     const decryptRecords = records.map((record)=>{
         const decryptedPassword = cryptr.decrypt(record.password)
