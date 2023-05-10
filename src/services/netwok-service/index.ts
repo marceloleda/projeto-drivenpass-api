@@ -4,7 +4,6 @@ import Cryptr = require("cryptr");
 import networkRepository from "@/repositories/network-repository";
 import httpStatus = require("http-status");
 import { Network } from "@prisma/client";
-import { notFoundError } from "@/errors";
 const cryptr = new Cryptr(process.env.CRYPTR, { pbkdf2Iterations: 10000, saltLength: 10 });
 
 async function networkCreate(res: Response, data: networkCreat){

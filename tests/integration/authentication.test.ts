@@ -2,7 +2,8 @@ import { faker } from '@faker-js/faker';
 import httpStatus from 'http-status';
 import supertest from 'supertest';
 import { createUser } from '../factories';
-import { cleanDb, generateValidToken } from '../helpers';
+import { cleanDb } from '../helpers';
+
 import app, { init } from '@/app';
 
 beforeAll(async () => {
@@ -62,7 +63,16 @@ describe('POST /auth/sign-in', () => {
   
           expect(response.status).toBe(httpStatus.OK);
         });
+        
+        it('should respond with status 201 when sign-up', async () => {
+          const body = generateValidBody();
+          
+          const response = await server.post('/sign-up').send(body);
+  
+          expect(response.status).toBe(httpStatus.CREATED);
+        });
       });
+      
     });
 });
   

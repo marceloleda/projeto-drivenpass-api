@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1683666869242" clover="3.2.0">
-  <project timestamp="1683666869242" name="All files">
-    <metrics statements="400" coveredstatements="198" conditionals="62" coveredconditionals="5" methods="62" coveredmethods="17" elements="524" coveredelements="220" complexity="0" loc="400" ncloc="400" packages="19" files="42" classes="42"/>
+<coverage generated="1683731245296" clover="3.2.0">
+  <project timestamp="1683731245297" name="All files">
+    <metrics statements="408" coveredstatements="339" conditionals="65" coveredconditionals="29" methods="63" coveredmethods="53" elements="536" coveredelements="421" complexity="0" loc="408" ncloc="408" packages="19" files="42" classes="42"/>
     <package name="src">
       <metrics statements="21" coveredstatements="14" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
       <file name="app.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/app.ts">
         <metrics statements="15" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="34" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
       </file>
       <file name="protocols.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/protocols.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -39,35 +39,35 @@
       <metrics statements="14" coveredstatements="13" conditionals="4" coveredconditionals="1" methods="3" coveredmethods="2"/>
       <file name="database.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/config/database.ts">
         <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
       </file>
       <file name="envs.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/config/envs.ts">
         <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/config/index.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="83" coveredstatements="30" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="1"/>
+      <metrics statements="83" coveredstatements="73" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="9"/>
       <file name="authentication-controller.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/controllers/authentication-controller.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
         <line num="6" count="3" type="stmt"/>
         <line num="7" count="3" type="stmt"/>
         <line num="8" count="3" type="stmt"/>
@@ -75,149 +75,149 @@
         <line num="12" count="2" type="stmt"/>
       </file>
       <file name="credential-controllers.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/controllers/credential-controllers.ts">
-        <metrics statements="17" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
+        <metrics statements="17" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/controllers/index.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
       </file>
       <file name="network-controller.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/controllers/network-controller.ts">
-        <metrics statements="30" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
+        <metrics statements="30" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
-        <line num="46" count="2" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
       </file>
       <file name="records-controller.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/controllers/records-controller.ts">
-        <metrics statements="15" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <metrics statements="15" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
       </file>
       <file name="sign-up-controller.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/controllers/sign-up-controller.ts">
-        <metrics statements="8" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
+        <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.errors">
-      <metrics statements="12" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <metrics statements="12" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
       <file name="conflict-error.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/errors/conflict-error.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/errors/index.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
       </file>
       <file name="invalid-data-error.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/errors/invalid-data-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
       </file>
       <file name="not-found-error.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/errors/not-found-error.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
       <file name="unauthorized-error.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/errors/unauthorized-error.ts">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
       </file>
     </package>
     <package name="src.middlewares">
-      <metrics statements="44" coveredstatements="19" conditionals="12" coveredconditionals="2" methods="8" coveredmethods="4"/>
+      <metrics statements="44" coveredstatements="28" conditionals="12" coveredconditionals="3" methods="8" coveredmethods="6"/>
       <file name="authentication-middleware.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/middlewares/authentication-middleware.ts">
-        <metrics statements="14" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
+        <metrics statements="14" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="25" type="stmt"/>
+        <line num="8" count="25" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="21" type="stmt"/>
+        <line num="11" count="21" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="21" type="stmt"/>
+        <line num="14" count="21" type="stmt"/>
+        <line num="16" count="21" type="stmt"/>
+        <line num="18" count="21" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
       </file>
       <file name="error-handling-middleware.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/middlewares/error-handling-middleware.ts">
         <metrics statements="16" coveredstatements="2" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
         <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="12" count="0" type="stmt"/>
         <line num="17" count="0" type="cond" truecount="0" falsecount="3"/>
@@ -235,167 +235,174 @@
       </file>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/middlewares/index.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
       </file>
       <file name="validation-middleware.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/middlewares/validation-middleware.ts">
         <metrics statements="11" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="15" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="15" count="8" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
-        <line num="20" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="23" count="5" type="stmt"/>
+        <line num="15" count="15" type="stmt"/>
+        <line num="16" count="14" type="stmt"/>
+        <line num="20" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="10" type="stmt"/>
+        <line num="23" count="14" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.credential-repository">
-      <metrics statements="10" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <metrics statements="15" coveredstatements="14" conditionals="3" coveredconditionals="2" methods="5" coveredmethods="5"/>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/repositories/credential-repository/index.ts">
-        <metrics statements="10" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="36" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="43" count="2" type="stmt"/>
-        <line num="50" count="2" type="stmt"/>
+        <metrics statements="15" coveredstatements="14" conditionals="3" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+        <line num="34" count="6" type="stmt"/>
+        <line num="39" count="6" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="49" count="1" type="cond" truecount="2" falsecount="1"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.network-repository">
-      <metrics statements="12" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <metrics statements="12" coveredstatements="11" conditionals="3" coveredconditionals="2" methods="4" coveredmethods="4"/>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/repositories/network-repository/index.ts">
-        <metrics statements="12" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="3"/>
+        <metrics statements="12" coveredstatements="11" conditionals="3" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="2" falsecount="1"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="44" count="2" type="stmt"/>
-        <line num="51" count="2" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="51" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.records-repository">
-      <metrics statements="8" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="8" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/repositories/records-repository/index.ts">
-        <metrics statements="8" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="17" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
+        <metrics statements="8" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="17" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.sign-up-repository">
-      <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/repositories/sign-up-repository/index.ts">
-        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.user-repository.ts">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/repositories/user-repository.ts/index.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
         <line num="9" count="3" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.routers">
-      <metrics statements="39" coveredstatements="39" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="40" coveredstatements="40" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="authentication-router.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/routers/authentication-router.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
       </file>
       <file name="credential-router.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/routers/credential-router.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
       </file>
       <file name="home-router.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/routers/home-router.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/routers/index.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
       </file>
       <file name="network-router.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/routers/network-router.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
       </file>
       <file name="sign-up-router.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/routers/sign-up-router.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.schemas">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="authentication-schemas.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/schemas/authentication-schemas.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/schemas/index.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.services">
@@ -413,16 +420,16 @@
       <metrics statements="22" coveredstatements="22" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
       <file name="errors.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/services/authentication-service/errors.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/services/authentication-service/index.ts">
         <metrics statements="20" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
         <line num="10" count="3" type="stmt"/>
         <line num="12" count="3" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
@@ -435,150 +442,151 @@
         <line num="34" count="1" type="stmt"/>
         <line num="38" count="2" type="stmt"/>
         <line num="39" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="50" count="2" type="stmt"/>
-        <line num="54" count="2" type="stmt"/>
-        <line num="55" count="2" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
+        <line num="55" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.services.credential-service">
-      <metrics statements="26" coveredstatements="8" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <metrics statements="27" coveredstatements="23" conditionals="9" coveredconditionals="5" methods="2" coveredmethods="2"/>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/services/credential-service/index.ts">
-        <metrics statements="26" coveredstatements="8" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
+        <metrics statements="27" coveredstatements="23" conditionals="9" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="cond" truecount="2" falsecount="1"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="21" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="39" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="49" count="2" type="stmt"/>
-        <line num="53" count="2" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="40" count="1" type="cond" truecount="2" falsecount="1"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.services.netwok-service">
-      <metrics statements="41" coveredstatements="6" conditionals="17" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="41" coveredstatements="27" conditionals="17" coveredconditionals="7" methods="6" coveredmethods="5"/>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/services/netwok-service/index.ts">
-        <metrics statements="41" coveredstatements="6" conditionals="17" coveredconditionals="0" methods="6" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="45" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="46" count="0" type="stmt"/>
+        <metrics statements="41" coveredstatements="27" conditionals="17" coveredconditionals="7" methods="6" coveredmethods="5"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="10" count="4" type="cond" truecount="0" falsecount="1"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="19" count="3" type="cond" truecount="0" falsecount="1"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="23" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="44" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="55" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="60" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="65" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="73" count="2" type="stmt"/>
-        <line num="80" count="2" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="59" count="1" type="cond" truecount="2" falsecount="1"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="64" count="1" type="cond" truecount="2" falsecount="1"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="72" count="3" type="stmt"/>
+        <line num="79" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.services.records-service">
-      <metrics statements="24" coveredstatements="6" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="24" coveredstatements="18" conditionals="8" coveredconditionals="4" methods="3" coveredmethods="3"/>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/services/records-service/index.ts">
-        <metrics statements="24" coveredstatements="6" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="10" count="0" type="cond" truecount="0" falsecount="1"/>
+        <metrics statements="24" coveredstatements="18" conditionals="8" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="10" count="2" type="cond" truecount="0" falsecount="1"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="cond" truecount="2" falsecount="1"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="cond" truecount="0" falsecount="1"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="32" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="33" count="0" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="32" count="2" type="cond" truecount="2" falsecount="1"/>
+        <line num="33" count="2" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
-        <line num="42" count="2" type="stmt"/>
-        <line num="46" count="2" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.services.sign-up-service">
-      <metrics statements="19" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="19" coveredstatements="17" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="index.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/services/sign-up-service/index.ts">
-        <metrics statements="19" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="cond" truecount="0" falsecount="1"/>
+        <metrics statements="19" coveredstatements="17" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="cond" truecount="0" falsecount="1"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="32" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="32" count="1" type="cond" truecount="0" falsecount="1"/>
         <line num="33" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="41" count="2" type="stmt"/>
-        <line num="44" count="2" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.utils">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="prisma-utils.ts" path="/home/marcelo/Driven/back-end/Projetos/projeto-drivenpass/src/utils/prisma-utils.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
