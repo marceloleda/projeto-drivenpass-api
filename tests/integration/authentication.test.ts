@@ -30,7 +30,7 @@ describe('POST /auth/sign-in', () => {
     describe('when body is valid', () => {
       const generateValidBody = () => ({
         email: faker.internet.email(),
-        password: faker.internet.password(6),
+        password: faker.internet.password(10),
       });
   
       it('should respond with status 401 if there is no user for given email', async () => {
@@ -64,5 +64,5 @@ describe('POST /auth/sign-in', () => {
         });
       });
     });
-  });
+});
   

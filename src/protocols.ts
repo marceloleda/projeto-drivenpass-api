@@ -15,3 +15,4 @@ export type create = Omit<Credential,  'id'  >;
 
 export type networkCreat = Omit<Network,  'id' >;
 
+export type credentialTest = Omit<Credential,  'id' | "userId" >;

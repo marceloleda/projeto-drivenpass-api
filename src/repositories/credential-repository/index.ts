@@ -1,31 +1,45 @@
 import { prisma } from '@/config';
-import { create, credent } from '@/protocols';
+import { create } from '@/protocols';
 
 async function createCredential(data: create, encryptedPassword: string) {
-  return prisma.credential.create({
+  const create =  await prisma.credential.create({
     data: {
       ...data,
       password: encryptedPassword
     },
   });
+  console.log(create)
+
+  return create;
 }
 
 async function findManyCredencials(url: string, userId: number) {
-    return prisma.credential.findMany({
+    const findCredent = await prisma.credential.findMany({
       where:{
         userId,
         url
       },
     });
+  return findCredent;
 }
 async function findManyCredencialsTitle(title: string, userId: number) {
-    return prisma.credential.findMany({
+    const findMany = await prisma.credential.findMany({
       where:{
         userId,
         title
       },
     });
+  return findMany;
 }  
+async function findByUserId(id: number) {
+  const find =  await prisma.user.findUnique({
+    where: {
+      id
+    },
+  });
+  return find;
+}
+
 async function deleteById(userId: number, id: number) {
   const credential = await prisma.credential.delete({
     where: {
@@ -44,7 +58,8 @@ const credentialRepository = {
     createCredential,
     findManyCredencials,
     findManyCredencialsTitle,
-    deleteById
+    deleteById,
+    findByUserId
 };
 
 export default credentialRepository;

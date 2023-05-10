@@ -1,16 +1,25 @@
 import bcrypt from 'bcrypt';
 import { faker } from '@faker-js/faker';
-import { User } from '@prisma/client';
+import { Credential } from '@prisma/client';
 import { prisma } from '@/config';
+import { createUser } from './users-factory';
 
-export async function createCredentials(params: Partial<User> = {}): Promise<User> {
+export async function createCredentialTest(params: Partial<Credential> = {}): Promise<Credential> {
   const incomingPassword = params.password || faker.internet.password(6);
   const hashedPassword = await bcrypt.hash(incomingPassword, 10);
-
-  return prisma.user.create({
+  const user = await createUser();
+  return prisma.credential.create({
     data: {
-      email: params.email || faker.internet.email(),
+      title: params.title || faker.lorem.word(),
+      url: params.url || faker.internet.url(),
+      username: params.username || faker.internet.userName(),
       password: hashedPassword,
-    },
+      user: {
+        connect: {
+          id: user.id
+        }
+      }
+    }
   });
 }
+
