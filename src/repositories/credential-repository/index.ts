@@ -8,7 +8,6 @@ async function createCredential(data: create, encryptedPassword: string) {
       password: encryptedPassword
     },
   });
-  console.log(create)
 
   return create;
 }

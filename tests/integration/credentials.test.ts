@@ -9,6 +9,7 @@ import { createUser } from '../factories';
 import { createCredentialTest } from '../factories/credentials-factory';
 import { credentialTest } from '@/protocols';
 import jwt from 'jsonwebtoken';
+import { prisma } from '@/config';
 
 
 const baseURL = '/credential';
@@ -95,4 +96,31 @@ describe('when token is valid', () => {
     expect(secondTry.status).toEqual(httpStatus.CONFLICT);
     expect(secondTry.body.message).toEqual('title must be unique');
   });
+
+  it("delete credential, it should return 202", async () => {
+    const credential = {
+      title: 'Central Functionality ',
+      url: 'https://loremflickr.c',
+      username: 'Ransom',
+      password: 'hashedPassword'
+    };
+    const user: User = await createUser()
+    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET);
+     await server.post(baseURL)
+      .set('Authorization', `Bearer ${token}`)
+      .send(credential);
+      const cred = await prisma.credential.findFirst({
+        where:{
+          title: credential.title
+        }
+      })
+    const response = await server.delete(`/credential/${cred.id}`)
+    .set('Authorization', `Bearer ${token}`)
+    .send(credential);
+    
+  
+    expect(response.status).toBe(httpStatus.ACCEPTED);
+  
+  })
+  
 });

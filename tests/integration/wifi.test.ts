@@ -2,9 +2,6 @@ import app, { init } from "@/app";
 import httpStatus from "http-status";
 import supertest from "supertest";
 import { createUser } from "../factories";
-import { generateTokenReal, generateValidToken } from "../helpers";
-import { User } from "@prisma/client";
-import { createNetworkTest } from "../factories/network-factory";
 import jwt from 'jsonwebtoken';
 
 
@@ -14,6 +11,14 @@ beforeAll(async () => {
     await init();
   });
 const server = supertest(app);
+describe("when token dont exist", ()=>{
+    it('should respond Unauthorized if no token', async ()=> {
+      const response = await server.post(baseURL);
+  
+      expect(response.status).toBe(httpStatus.UNAUTHORIZED)
+    })
+  })
+  
 
 describe('when token is valid', () => {
 
@@ -63,5 +68,7 @@ describe('when token is valid', () => {
       
         expect(response.status).toBe(httpStatus.NOT_FOUND);
     })
-    
+
+   
+
 })
