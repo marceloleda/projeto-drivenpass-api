@@ -3,13 +3,14 @@ import httpStatus from 'http-status';
 import app, { init } from '@/app';
 import { cleanDb, generateValidToken } from '../helpers';
 import { faker } from '@faker-js/faker';
-import { User } from '@prisma/client';
+import { Credential, User } from '@prisma/client';
 import { createUser } from '../factories';
 import jwt from 'jsonwebtoken';
 import Cryptr = require("cryptr");
 const cryptr = new Cryptr(process.env.CRYPTR, { pbkdf2Iterations: 10000, saltLength: 10 });
 
 import { prisma } from '@/config';
+import credentialsService from '@/services/credential-service';
 
 
 const baseURL = '/credential';
@@ -202,40 +203,32 @@ describe('list Credential', () => {
   });
 });
 describe('listRecordsById', () => {
-  const userId = '123';
   let credentialId: number;
-
   beforeAll(async () => {
-    const user = await createUser(); 
-    const credential = await prisma.credential.create({
-      data: {
-        userId: user.id,
-        title: 'Test Credential',
-        url: 'http://test.com',
-        username: 'testuser',
-        password: 'testpassword',
-      },
-    });
-    credentialId = credential.id;
+   
+    
+    credentialId = 123456;
   });
-
 
   it('should return status 404 when the id is invalid', async () => {
     const user: User = await createUser()
+
     const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET);
 
     const response = await server
-      .get(`/home/${faker.random.alphaNumeric(4)}`)
+      .get(`/home/${credentialId}`)
       .set('Authorization', `Bearer ${token}`)
 
     expect(response.status).toBe(httpStatus.NOT_FOUND);
   });
   it('should return 401 when user is not authenticated', async () => {
+    const user = await createUser(); 
     const res = await server.get(`/home/${credentialId}`);
     expect(res.status).toBe(401);
   });
   it('should return 404 when credential is not found', async () => {
     const user = await createUser(); 
+  
     const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET);
 
     const res = await server
@@ -243,4 +236,42 @@ describe('listRecordsById', () => {
       .set('Authorization', `Bearer ${token}`);
     expect(res.status).toBe(404);
   });
+  it('should return the decrypted credential when credential exists and user is authenticated', async () => {
+    const user: User = await createUser()
+    const credential = {
+    title: 'Test Credential',
+    url: 'https://test.com',
+    username: 'testuser',
+    password: cryptr.encrypt('testpassword'),
+    userId: user.id
+  };
+  const createdCredential = await prisma.credential.create({
+    data: credential
+  });
+  const id = createdCredential.id
+  const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET);
+
+  const res = await server
+    .get(`/home/${id}`)
+      .set('Authorization', `Bearer ${token}`);
+      const find: Credential = await prisma.credential.findFirst({
+        where:{
+          id: id
+        }
+      })
+      const decryptedPassword = cryptr.decrypt(find.password);
+      const decryptedRecord = { ...find, password: decryptedPassword };
+
+  expect(res.status).toBe(200);
+  expect(decryptedRecord).toEqual({
+    id: expect.any(Number),
+    title: 'Test Credential',
+    url: 'https://test.com',
+    username: 'testuser',
+    password: 'testpassword',
+    userId: expect.any(Number)
+
+  });
+});
+  
 });
