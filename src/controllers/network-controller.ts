@@ -1,8 +1,6 @@
 import { AuthenticatedRequest } from "@/middlewares";
 import { networkCreat } from "@/protocols";
 import networkService from "@/services/netwok-service";
-import recordsService from "@/services/records-service";
-import { Network } from "@prisma/client";
 import { Response } from "express";
 import httpStatus from "http-status";
 
